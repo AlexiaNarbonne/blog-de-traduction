@@ -1,0 +1,147 @@
+/* Polices ------------------------------------------------*/
+
+@font-face {
+    font-family: New York;
+    src: url(Polices/NewYork.otf);
+}
+
+@font-face {
+    font-family: Walterosse;
+    src: url(Polices/Walterosse.otf);
+}
+
+/* Général ------------------------------------------------*/
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background-color: white;
+    color: black;
+}
+
+section {
+    margin-top: 5%;
+}
+
+p {
+    margin: 0%;
+    padding: 1%;
+    padding-bottom: 2%;
+    font: 18px 'Times New Roman';
+}
+
+h3 {
+    font: bold 26px 'New York';
+    color: black;
+}
+
+::selection {
+    background-color: rgba(47, 92, 82, 0.245);
+}
+
+/* Accueil ------------------------------------------------*/
+
+#accueil {
+    margin: 0%;
+    width: 100%;
+    height: 800px;
+    background-image: url(Images/fond_acc_sombre.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+
+h1 {
+    font: 60px 'Walterosse';
+    color: white;
+    margin-bottom: 0%;
+}
+
+h2 {
+    font: 40px 'Walterosse';
+    color: rgba(255, 255, 255, 0.601);
+    margin-left: 14%;
+    margin-top: 0%;
+}
+
+#accueil #titres {
+    padding-top: 36%;
+    margin-left: 10%;
+    background-attachment:local;
+}
+
+/* Présentation ------------------------------------------------*/
+
+#presentation {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+/* Menu ------------------------------------------------------*/
+
+#menu {
+    display: flex;
+    margin: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.elem_menu {
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: 300px;
+    background-color: rgb(60, 89, 79);
+    border-radius: 20px;
+    position: relative;
+    
+}
+
+.elem_menu p {
+    color: white;
+    bottom: 4%;
+    right: 5%;
+    position: absolute;
+}
+
+.elem_menu:hover {
+    transition: all 0.5s ease-in-out;
+    transform: rotate3D(0, 1, 0.2, 350deg) scale(1.2);
+    filter: brightness(1.3);
+    transform-style: preserve-3d;
+}
+
+
+
+/* Pied de page ------------------------------------------------*/
+
+footer {
+    background-color: rgb(12, 15, 15);
+    color: white;
+    display: flex;
+    height: 150px;
+}
+
+footer section {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
