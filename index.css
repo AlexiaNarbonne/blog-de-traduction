@@ -45,7 +45,12 @@ h3 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
+
+.copier:hover { 
+    cursor: pointer;
+}
+
 
 /* Accueil ------------------------------------------------*/
 
@@ -185,6 +190,8 @@ footer .icone {
     font-size: 12px;
     color: rgba(251, 251, 251, 0.738);
 }
+
+
 
 
 
