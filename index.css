@@ -14,6 +14,7 @@
     --marron-fonce: #282624;
     --marron-clair: #5b473ee8;
     --bleu: rgba(47, 92, 82, 0.245);
+    --bleu-fonce: rgb(66, 96, 93);
     --beige-fonce: #a87a717d;
     --beige: #e5d9ce;
     --beige-clair: #ede6e0;
@@ -46,7 +47,7 @@ p {
 
 h3 {
     font: bold 26px 'New York';
-    color: var(--marron-fonce);
+    color: var(--marron-clair);
 }
 
 ::selection {
@@ -97,16 +98,20 @@ h3 {
 nav {
     color: white;
     border-radius: 70px;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     position: fixed;
     margin: 3% 0% 0% 2%;
     display: inline-block;
     z-index: 1;
-    transition: 1s ease-in-out;
     
     &:hover .deroulant {
         display: block;
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.779);
+        border-radius: 30px;
     }
 }
 
@@ -115,12 +120,15 @@ nav > a {
 }
 
 .deroulant {
-    padding-top: 30%;
-    left: 15%;
+    padding: 1%;
+    margin-top: 20%;
+    text-align: center;
     display: none;
     position: absolute;
     min-width: 160px;
     z-index: 1;
+    background-color: rgba(255, 255, 255, 0.779);
+    border-radius: 30px;
 }
 
 .deroulant a {
@@ -170,13 +178,9 @@ nav img {
     margin: 0%;
     width: 100%;
     height: 800px;
-    background-image: url(Images/fond_acc_clair2.jpg);
+    background-image: url(Images/Fonds/fond_acc_clair.jpg);
     background-size: cover;
     background-position: center;
-}
-
-.mini_accueil {
-    height: 300px;
 }
 
 h1 {
@@ -192,7 +196,7 @@ h2 {
     margin-top: 0%;
 }
 
-#accueil #titres {
+#accueil .titres {
     padding-top: 36%;
     margin-left: 12%;
     background-attachment:local;
@@ -259,7 +263,7 @@ h2 {
 
 
 
-/* Plan du site ------------------------------------------------*/
+
 
 
 
@@ -270,10 +274,87 @@ h2 {
 
 /* Version, thème et commentaires ------------------------------------------------*/
 
+h4 {
+    padding: 3%;
+    padding-top: 5vw;
+    margin-left: 18%;
+    margin-right: 18%;
+    width: auto;
+    
+    font: bold 40px 'Walterosse';
+    color: var(--marron-clair);
+    
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 0 0 30px 30px;
+}
+
+.mini_accueil {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: white;
+}
+
+#acc_version {
+    background-image: url(Images/Fonds/fond_version.jpg);
+}
+
+#acc_theme {
+    background-image: url(Images/Fonds/fond_theme.jpg);
+}
+
+#acc_commentaires {
+    background-image: url(Images/Fonds/fond_commentaires.jpg);
+}
+
 article {
-    margin: 10%;
-    margin-left: 22%;
-    margin-right: 22%;
+    margin: 6%;
+    padding: 3%;
+    margin-left: 18%;
+    margin-right: 18%;
+    width: auto;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 30px;
+    
+    text-align: center;
+}
+
+.anglais {
+    color: var(--bleu-fonce);
+    text-align: left;
+    
+    &::first-letter {
+        font: bold 40px 'Walterosse';
+    }
+    
+}
+
+.francais {
+    text-align: left;
+    &::first-letter {
+        font: bold 40px 'Walterosse';
+    }
+}
+
+article .separation {
+    width: 40%;
+    height: 50px;
+    margin: 2%;
+}
+
+
+
+
+
+
+/* Mentions légales ------------------------------------------------*/
+
+.bleuuu {
+    background-color: var(--bleu);
 }
 
 
@@ -283,7 +364,7 @@ article {
 
 
 
-
+/* Plan du site ------------------------------------------------*/
 
 
 
@@ -297,7 +378,7 @@ footer {
     background-color: var(--beige);
     color: var(--marron-clair);
     display: flex;
-    height: 22%;
+    height: 170px;
     padding-left: 15%;
     padding-right: 15%;
 }
@@ -307,22 +388,29 @@ footer section {
     margin-left: auto;
     margin-right: auto;
     width: 25%;
-    background-color: rgba(255, 255, 255, 0.247);
     border-radius: 10px;
     text-align: center;
 }
 
 footer section p {
+    font-size: 15px;
     padding: 3%;
     margin-left: auto;
     margin-right: auto;
 }
 
-footer section a {
+footer section a, article a {
     color: var(--marron-clair);
     text-decoration-style: dotted;
     text-decoration-thickness: 6px;
     text-decoration-color: var(--beige-fonce);
+}
+
+footer > img {
+    margin: 2%;
+    width: 20px;
+    transform: rotateZ(1deg);
+    height: 80%;
 }
 
 footer [data-title]::after {
