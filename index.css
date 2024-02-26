@@ -10,13 +10,24 @@
     src: url(Polices/Walterosse.otf);
 }
 
+:root {
+    --marron-fonce: #282624;
+    --marron-clair: #5b473ee8;
+    --bleu: rgba(47, 92, 82, 0.245);
+    --beige-fonce: #a87a717d;
+    --beige: #e5d9ce;
+    --beige-clair: #ede6e0;
+
+}
+
 /* Général ------------------------------------------------*/
 
 body {
+    top: 0;
     margin: 0%;
     padding: 0%;
     background-color: white;
-    color: black;
+    color: var(--marron-clair);
 }
 
 section {
@@ -35,11 +46,11 @@ p {
 
 h3 {
     font: bold 26px 'New York';
-    color: black;
+    color: var(--marron-fonce);
 }
 
 ::selection {
-    background-color: rgba(47, 92, 82, 0.245);
+    background-color: var(--bleu);
 }
 
 .unselectable {
@@ -59,8 +70,8 @@ h3 {
 
     &::after {
         content: attr(data-title);
-        background-color: rgba(255, 255, 255, 0.8);
-        color: black;
+        background-color: var(--beige-clair);
+        color: var(--marron-clair);
         border-radius: 10px;
         font-size: 80%;
         position: absolute;
@@ -84,19 +95,28 @@ h3 {
 /* Barre de navigation ------------------------------------------------*/
 
 nav {
-    color: #2f4142;
+    color: white;
+    border-radius: 70px;
+    width: 150px;
+    height: 150px;
     position: fixed;
-    margin-top: 4%;
-    margin-left: 2%;
+    margin: 3% 0% 0% 2%;
     display: inline-block;
     z-index: 1;
+    transition: 1s ease-in-out;
     
     &:hover .deroulant {
         display: block;
     }
 }
 
+nav > a {
+    text-decoration: none;
+}
+
 .deroulant {
+    padding-top: 30%;
+    left: 15%;
     display: none;
     position: absolute;
     min-width: 160px;
@@ -104,7 +124,7 @@ nav {
 }
 
 .deroulant a {
-    color: #6c8f8f;
+    color: var(--marron-fonce);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -115,26 +135,24 @@ nav {
     }
 }
 
-nav #logo_nav {
-    transition: 1s ease-in-out;
-}
+
 nav img {
-    margin: none;
+    margin-top: 20%;
     padding: none;
-    width: 10%;
-    height: 40%;
+    width: 30%;
+    height: 60%;
 }
 
 #petales_gauche {
     animation-name: rotation;
-    animation-duration: 4s;
+    animation-duration: 12s;
     animation-iteration-count: infinite;
     transform-origin: 160% 50%;
 }
 
 #petales_droite {
     animation-name: rotation;
-    animation-duration: 4s;
+    animation-duration: 12s;
     animation-iteration-count: infinite;
     transform-origin: -60% 50%;
 }
@@ -152,8 +170,8 @@ nav img {
     margin: 0%;
     width: 100%;
     height: 800px;
-    background-image: url(Images/fond_acc_sombre.jpg);
-    background-size: 100%;
+    background-image: url(Images/fond_acc_clair2.jpg);
+    background-size: cover;
     background-position: center;
 }
 
@@ -163,13 +181,13 @@ nav img {
 
 h1 {
     font: 60px 'Walterosse';
-    color: white;
+    color: var(--marron-fonce);
     margin-bottom: 0%;
 }
 
 h2 {
     font: 40px 'Walterosse';
-    color: rgba(255, 255, 255, 0.601);
+    color: var(--marron-fonce);
     margin-left: 14%;
     margin-top: 0%;
 }
@@ -194,10 +212,14 @@ h2 {
     margin-right: 15%;
 }
 
+#menu a {
+    width: 50%;
+    text-decoration: none;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 .elem_menu {
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
     height: 300px;
     border-radius: 20px;
     position: relative;
@@ -215,7 +237,7 @@ h2 {
 }
 
 .elem_menu p {
-    color: rgb(0, 0, 0);
+    color: var(--marron-clair);
     top: 43%;
     padding: 4%;
     padding-bottom: 5%;
@@ -246,12 +268,34 @@ h2 {
 
 
 
+/* Version, thème et commentaires ------------------------------------------------*/
+
+article {
+    margin: 10%;
+    margin-left: 22%;
+    margin-right: 22%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Pied de page ------------------------------------------------*/
 
 footer {
-    background-color: rgb(12, 15, 15);
-    color: white;
+    background-color: var(--beige);
+    color: var(--marron-clair);
     display: flex;
     height: 22%;
     padding-left: 15%;
@@ -263,8 +307,8 @@ footer section {
     margin-left: auto;
     margin-right: auto;
     width: 25%;
-    background-color: rgba(99, 99, 99, 0.044);
-    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.247);
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -275,10 +319,14 @@ footer section p {
 }
 
 footer section a {
-    color: white;
+    color: var(--marron-clair);
     text-decoration-style: dotted;
     text-decoration-thickness: 6px;
-    text-decoration-color: rgba(255, 255, 255, 0.214);
+    text-decoration-color: var(--beige-fonce);
+}
+
+footer [data-title]::after {
+    background-color: white;
 }
 
 footer #creation {
@@ -287,14 +335,14 @@ footer #creation {
 }
 
 footer .icone {
-    width: 15%;
+    width: 36px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .tout_ptit {
     font-size: 12px;
-    color: rgba(251, 251, 251, 0.738);
+    color: var(--marron-clair);
 }
 
 
