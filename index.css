@@ -275,6 +275,7 @@ h2 {
 /* Version, thème et commentaires ------------------------------------------------*/
 
 h4 {
+    text-align: center;
     padding: 3%;
     padding-top: 5vw;
     margin-left: 18%;
@@ -282,11 +283,9 @@ h4 {
     width: auto;
     
     font: bold 40px 'Walterosse';
-    color: var(--marron-clair);
-    
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(8px);
-    border-radius: 0 0 30px 30px;
+    letter-spacing: 40px;
+    color: var(--marron-fonce);
+    backdrop-filter: blur(2px);
 }
 
 .mini_accueil {
@@ -324,8 +323,8 @@ article {
 }
 
 .anglais {
+    text-align: justify;
     color: var(--bleu-fonce);
-    text-align: left;
     
     &::first-letter {
         font: bold 40px 'Walterosse';
@@ -334,7 +333,8 @@ article {
 }
 
 .francais {
-    text-align: left;
+    text-align: justify;
+
     &::first-letter {
         font: bold 40px 'Walterosse';
     }
