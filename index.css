@@ -277,13 +277,13 @@ h2 {
 h4 {
     text-align: center;
     padding: 3%;
-    padding-top: 5vw;
+    padding-top: 10vh;
     margin-left: 18%;
     margin-right: 18%;
     width: auto;
     
     font: bold 40px 'Walterosse';
-    letter-spacing: 40px;
+    letter-spacing: 3vw;
     color: var(--marron-fonce);
     backdrop-filter: blur(2px);
 }
@@ -309,8 +309,8 @@ h4 {
 }
 
 article {
-    margin: 6%;
-    padding: 3%;
+    margin: 10vh;
+    padding: 5%;
     margin-left: 18%;
     margin-right: 18%;
     width: auto;
@@ -355,6 +355,11 @@ article .separation {
 
 .bleuuu {
     background-color: var(--bleu);
+    text-align: justify;
+}
+
+.bleuuu p {
+    line-height: 30px;
 }
 
 
@@ -381,6 +386,7 @@ footer {
     height: 170px;
     padding-left: 15%;
     padding-right: 15%;
+    overflow-wrap: break-word;
 }
 
 footer section {
